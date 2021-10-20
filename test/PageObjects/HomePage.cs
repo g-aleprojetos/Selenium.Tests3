@@ -1,12 +1,14 @@
 ﻿using OpenQA.Selenium;
 using test.Fixtures;
 using Xunit;
+using Xunit.Priority;
 
 namespace test.PageObjects
 {
     public class HomePage
     {
         [Collection("Chrome Driver")]
+        [TestCaseOrderer(PriorityOrderer.Name, PriorityOrderer.Assembly)]
         public class AoNavegarParaHome
         {
             private IWebDriver driver;
@@ -17,7 +19,7 @@ namespace test.PageObjects
                 driver = fixture.Driver;
             }
 
-            [Fact]
+            [Fact, Priority(1)]
             public void DadoChromeAbertoDeveMostrarLeiloesNoTitulo()
             {
                 //arrange
