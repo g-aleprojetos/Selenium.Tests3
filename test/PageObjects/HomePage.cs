@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using test.Dados;
 
 namespace test.PageObjects
@@ -8,7 +8,7 @@ namespace test.PageObjects
         IWebDriver driver;
         private DadosGerais dados;
 
-        public HomePage()
+      public HomePage()
         {
             dados = new DadosGerais();
         }
