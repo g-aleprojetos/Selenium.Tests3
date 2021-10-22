@@ -8,16 +8,17 @@ namespace test.PageObjects
         IWebDriver driver;
         private DadosGerais dados;
 
-      public HomePage()
+      public HomePage(IWebDriver driver)
         {
+            this.driver = driver;
             dados = new DadosGerais();
         }
 
-        public void OpenPage()
+        public HomePage OpenPage()
         {
 
             driver.Navigate().GoToUrl(dados.URL);
-
+            return this;
         }
 
     }

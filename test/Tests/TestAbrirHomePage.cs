@@ -17,7 +17,7 @@ namespace test.Tests
         public TestAbrirHomePage(TestFixture fixture)
         {
             driver = fixture.Driver;
-            navegar = new HomePage();
+            navegar = new HomePage(driver);
         }
 
         [Fact, Priority(0)]
